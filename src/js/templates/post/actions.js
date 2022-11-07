@@ -16,13 +16,13 @@ export const postActions = (post) => {
   if (viewing) {
     viewButton.remove()
   } else {
-    viewButton.href = `/?view=post&postId=${post.id}`
+    viewButton.href = `/workflow-social-ca/?view=post&postId=${post.id}`
   }
 
   if (owned) {
     deleteButton.addEventListener("click", async () => {
       await deletePost(post.id)
-      location.href = "/";
+      location.href = "/social-media-client-workflow-ca";
     })
   } else {
     deleteButton.remove()
